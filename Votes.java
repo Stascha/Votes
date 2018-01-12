@@ -23,21 +23,20 @@ public class Votes
                     break;
                 }
 
-            if (already_counted == 0)
+            if (already_counted == 0) {
                 for (int j = i; j < votes.length; j++)
                     tempSum = candidate == votes[j] ? tempSum + 1 : tempSum ;
 
-            if (tempSum >= maximum_votes && winner.compareTo(candidate) < 0 ){
-                maximum_votes = tempSum;
-                winner = candidate;
+                if (tempSum >= maximum_votes && winner.compareTo(candidate) < 0 ){
+                   maximum_votes = tempSum;
+                   winner = candidate;
 
-            }
-
+                }
+            }    
         }
 
         return winner;
     }
-
 
     public static String solution2(String[] votes)
     {
@@ -65,7 +64,6 @@ public class Votes
 
         return winner;
     }
-
 
     static String solution3(String[] votes)
     {
@@ -117,5 +115,5 @@ public class Votes
 
     }
 
-
 }
+
